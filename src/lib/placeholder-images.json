@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "Mecano Solutions Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1748326650737-33500fdfda30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb2dvJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5NDEwNzE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo abstract"
+    },
+    {
+      "id": "hero",
+      "description": "Estanterías metálicas industriales en una bodega grande",
+      "imageUrl": "https://images.unsplash.com/photo-1736507748808-31bb64ce6fcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk0OTc5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "warehouse shelving"
+    },
+    {
+      "id": "rack-selectivo",
+      "description": "Rack selectivo para almacenaje industrial",
+      "imageUrl": "https://images.unsplash.com/photo-1725922824540-757539adc2cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYWxsZXQlMjByYWNraW5nfGVufDB8fHx8MTc1OTQ5NzkxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pallet racking"
+    },
+    {
+      "id": "angulo-ranurado",
+      "description": "Estantería de ángulo ranurado modular",
+      "imageUrl": "https://images.unsplash.com/photo-1701655988588-1ad0cd100d93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZXRhbCUyMHNoZWx2ZXN8ZW58MHx8fHwxNzU5NDk3OTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metal shelves"
+    },
+    {
+      "id": "full-space",
+      "description": "Estantería móvil Full Space para maximizar espacio",
+      "imageUrl": "https://images.unsplash.com/photo-1673530967119-c175760dc9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2JpbGUlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk0OTc5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile shelving"
+    },
+    {
+      "id": "altillo-estructural",
+      "description": "Altillo estructural o mesanina en una bodega",
+      "imageUrl": "https://images.unsplash.com/photo-1635445714293-5e1580101836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWV6emFuaW5lJTIwd2FyZWhvdXNlfGVufDB8fHx8MTc1OTQ5NzkxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mezzanine warehouse"
+    },
+    {
+      "id": "benefits-bg",
+      "description": "Fondo para la sección de beneficios",
+      "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlfGVufDB8fHx8MTc1OTQ3NTAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial warehouse"
+    },
+    {
+      "id": "certifications-bg",
+      "description": "Fondo para la sección de certificaciones",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU5NDc5MjA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    }
+  ]
 }
