@@ -65,7 +65,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">+56 9 9981 3058</a></li>
               <li>contacto@mecanosolutions.cl</li>
-              <li>Cabrero 232<br/>San Bernardo, Chile</li>
+              <li>Carretera General San Martín, Paradero 26 S/N<br/>Colina, Chile</li>
             </ul>
           </div>
         </div>

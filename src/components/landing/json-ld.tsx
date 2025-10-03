@@ -9,16 +9,16 @@ export function JsonLd() {
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Av. Industrial 1234",
-          "addressLocality": "Santiago",
+          "streetAddress": "Carretera General San Martín, Paradero 26 S/N",
+          "addressLocality": "Colina",
           "addressRegion": "RM",
-          "postalCode": "8320000",
+          "postalCode": "9340000",
           "addressCountry": "CL"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "-33.4489",
-          "longitude": "-70.6693"
+          "latitude": "-33.270382",
+          "longitude": "-70.67896"
         },
         "openingHours": "Mo-Fr 09:00-18:00",
         "areaServed": "CL",
@@ -40,7 +40,7 @@ export function JsonLd() {
           "@type": "PostalAddress",
           "addressCountry": "CL",
           "addressRegion": "Región Metropolitana",
-          "addressLocality": "Santiago"
+          "addressLocality": "Colina"
         },
         "areaServed": ["Chile", "Santiago", "Valparaíso", "Concepción", "Antofagasta"],
         "hasCredential": [
