@@ -31,7 +31,6 @@ export default function Header() {
   const navLinks = [
     { href: "/#productos", label: "Productos" },
     { href: "/#beneficios", label: "Beneficios" },
-    { href: "/#certificaciones", label: "Certificaciones" },
   ];
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -43,9 +42,9 @@ export default function Header() {
             <Image
               src={logoImage.imageUrl}
               alt={logoImage.description}
-              width={64}
-              height={64}
-              className="w-12 h-12 lg:w-16 lg:h-16 object-contain"
+              width={128}
+              height={128}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
               data-ai-hint={logoImage.imageHint}
             />
           )}
