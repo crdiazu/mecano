@@ -46,6 +46,7 @@ export async function submitQuote(prevState: any, formData: FormData) {
   if (emailSentSuccessfully) {
     return {
       message: "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.",
+      errors: {}
     };
   } else {
      return {

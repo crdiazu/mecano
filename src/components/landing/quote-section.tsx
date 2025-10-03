@@ -1,7 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
-import { useEffect } from "react";
+import { useState } from "react";
+import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,46 +15,81 @@ import {
 } from "@/components/ui/select";
 import Reveal from "@/components/client/reveal";
 import { useToast } from "@/hooks/use-toast";
-import { submitQuote } from "@/app/actions";
 
-const initialState = {
-  message: "",
-  errors: {},
+const quoteSchema = z.object({
+  name: z.string().min(2, "El nombre es muy corto"),
+  company: z.string().optional(),
+  email: z.string().email("El email no es válido"),
+  phone: z.string().optional(),
+  product: z.string().min(1, "Por favor selecciona un producto"),
+  message: z.string().min(10, "El mensaje es muy corto"),
+});
+
+type FormData = z.infer<typeof quoteSchema>;
+
+const initialErrors = {
+    name: [],
+    company: [],
+    email: [],
+    phone: [],
+    product: [],
+    message: [],
 };
 
-function SubmitButton() {
-    const { pending } = useFormStatus();
-    return (
-        <Button type="submit" className="w-full shadow-orange" size="lg" disabled={pending}>
-            {pending ? "Enviando..." : "Enviar Solicitud de Cotización"}
-        </Button>
-    );
-}
-
-
 export default function QuoteSection() {
-  const [state, formAction] = useFormState(submitQuote, initialState);
   const { toast } = useToast();
+  const [errors, setErrors] = useState<Record<keyof FormData, string[] | undefined>>(initialErrors);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (state?.message) {
-        if(state.errors && Object.keys(state.errors).length > 0) {
-            toast({
-                title: "Error en el formulario",
-                description: state.message,
-                variant: "destructive",
-            });
-        } else {
-            toast({
-                title: "Solicitud Enviada",
-                description: state.message,
-            });
-            // Simple form reset - this might need a more robust solution if form is complex
-            const form = document.querySelector('#cotizacion form') as HTMLFormElement;
-            if (form) form.reset();
-        }
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setErrors(initialErrors);
+
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    const validatedFields = quoteSchema.safeParse(data);
+
+    if (!validatedFields.success) {
+      const fieldErrors = validatedFields.error.flatten().fieldErrors;
+      setErrors(fieldErrors as Record<keyof FormData, string[] | undefined>);
+      toast({
+        title: "Error en el formulario",
+        description: "Por favor, corrige los errores antes de enviar.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
     }
-  }, [state, toast]);
+
+    const { name, company, email, phone, product, message } = validatedFields.data;
+    
+    const whatsappMessage = `
+*Nueva Solicitud de Cotización*
+
+*Nombre:* ${name}
+*Empresa:* ${company || 'No especificada'}
+*Email:* ${email}
+*Teléfono:* ${phone || 'No especificado'}
+*Producto de Interés:* ${product}
+
+*Mensaje:*
+${message}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/56999813058?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    toast({
+        title: "Redirigiendo a WhatsApp",
+        description: "Preparamos tu mensaje. ¡Solo falta que lo envíes!",
+    });
+
+    // Reset form
+    (event.target as HTMLFormElement).reset();
+    setIsSubmitting(false);
+  };
 
   return (
     <section id="cotizacion" className="relative w-full bg-background/70 py-20 lg:py-28">
@@ -68,12 +103,12 @@ export default function QuoteSection() {
 
         <Reveal className="mt-12 max-w-2xl mx-auto" delay={200}>
           <div className="rounded-2xl bg-card border p-6 lg:p-8">
-              <form action={formAction} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">Nombre</label>
                     <Input id="name" name="name" placeholder="Tu nombre" />
-                    {state.errors?.name && <p className="text-destructive text-sm mt-1">{state.errors.name}</p>}
+                    {errors.name && <p className="text-destructive text-sm mt-1">{errors.name[0]}</p>}
                   </div>
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium mb-2">Empresa (Opcional)</label>
@@ -84,7 +119,7 @@ export default function QuoteSection() {
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                     <Input id="email" name="email" type="email" placeholder="tu@email.com" />
-                    {state.errors?.email && <p className="text-destructive text-sm mt-1">{state.errors.email}</p>}
+                     {errors.email && <p className="text-destructive text-sm mt-1">{errors.email[0]}</p>}
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium mb-2">Teléfono (Opcional)</label>
@@ -105,7 +140,7 @@ export default function QuoteSection() {
                           <SelectItem value="consulta-general">Consulta General</SelectItem>
                         </SelectContent>
                     </Select>
-                  {state.errors?.product && <p className="text-destructive text-sm mt-1">{state.errors.product}</p>}
+                  {errors.product && <p className="text-destructive text-sm mt-1">{errors.product[0]}</p>}
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">Mensaje</label>
@@ -115,9 +150,11 @@ export default function QuoteSection() {
                     rows={4}
                     placeholder="Cuéntanos sobre tu proyecto..."
                   />
-                  {state.errors?.message && <p className="text-destructive text-sm mt-1">{state.errors.message}</p>}
+                  {errors.message && <p className="text-destructive text-sm mt-1">{errors.message[0]}</p>}
                 </div>
-                <SubmitButton />
+                <Button type="submit" className="w-full shadow-orange" size="lg" disabled={isSubmitting}>
+                    {isSubmitting ? "Generando Mensaje..." : "Enviar por WhatsApp"}
+                </Button>
               </form>
           </div>
         </Reveal>
