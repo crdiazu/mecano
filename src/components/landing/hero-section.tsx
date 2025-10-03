@@ -45,7 +45,7 @@ export default function HeroSection() {
       <div className="relative z-30 container mx-auto px-6 lg:px-8 py-16">
         <Reveal>
           <h1 className="font-headline font-extrabold tracking-tight text-5xl lg:text-7xl mb-4 text-white">
-            Estanterías Metálicas Chile{" "}
+            Sistemas de Almacenaje modulares en Acero{" "}
             <span className="text-primary">MECANO SOLUTIONS</span>
           </h1>
           <p className="mt-4 text-lg lg:text-xl max-w-3xl mx-auto text-slate-200">
