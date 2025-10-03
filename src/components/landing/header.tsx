@@ -10,6 +10,8 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -30,11 +32,41 @@ export default function Header() {
     { href: "/#beneficios", label: "Beneficios" },
   ];
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const logoImage = PlaceHolderImages.find((img) => img.id === "logo");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
-      <div className="container mx-auto px-6 lg:px-8 h-[80px] flex items-center justify-end">
+      <div className="container mx-auto px-6 lg:px-8 h-[80px] flex items-center justify-between">
         
+        <Link href="/" className="flex items-center gap-3">
+          {logoImage && (
+            <Image
+              src={logoImage.imageUrl}
+              alt={logoImage.description}
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+              data-ai-hint={logoImage.imageHint}
+              priority
+            />
+          )}
+          <div>
+            <div className="font-headline font-bold text-foreground text-lg">MECANO SOLUTIONS</div>
+            <div className="text-muted-foreground text-xs">Almacenaje Modular en Acero</div>
+          </div>
+        </Link>
+        
+        <nav className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/blog" className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1">
+             <BookOpen className="w-4 h-4"/> Blog
+          </Link>
+        </nav>
+
         <div className="flex items-center justify-end gap-3">
             <div className="hidden sm:flex items-center gap-3">
               <Button
@@ -62,7 +94,7 @@ export default function Header() {
             </div>
         
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger asChild>
+            <SheetTrigger asChild className="md:hidden">
               <Button variant="outline" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Abrir menú</span>
