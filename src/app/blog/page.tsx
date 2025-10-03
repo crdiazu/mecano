@@ -17,7 +17,7 @@ export default function BlogIndex() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow pt-[88px]">
+      <main className="flex-grow pt-[120px]">
         <section className="py-20 lg:py-28">
           <div className="container mx-auto px-6 lg:px-8">
             <Reveal>

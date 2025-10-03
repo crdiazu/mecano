@@ -44,7 +44,7 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow pt-[88px]">
+      <main className="flex-grow pt-[120px]">
         <article>
             <Reveal>
                 <header className="relative py-24 lg:py-40 text-center">

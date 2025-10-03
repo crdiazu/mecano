@@ -36,15 +36,15 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
-      <div className="container mx-auto px-6 lg:px-8 h-[88px] flex items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-8 h-[120px] flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group shrink-0">
           {logoImage && (
             <Image
               src={logoImage.imageUrl}
               alt={logoImage.description}
-              width={128}
-              height={128}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              width={160}
+              height={160}
+              className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
               data-ai-hint={logoImage.imageHint}
             />
           )}
