@@ -11,7 +11,6 @@ import { useState } from "react";
 const navLinks = [
   { href: "#productos", label: "Productos" },
   { href: "#certificaciones", label: "Certificaciones" },
-  { href: "#cobertura", label: "Cobertura" },
   { href: "#cotizacion", label: "Contacto" },
 ];
 
