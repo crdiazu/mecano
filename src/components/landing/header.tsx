@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
       <div className="container mx-auto px-6 lg:px-8 h-[88px] flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group shrink-0">
           {logoImage && (
             <Image
               src={logoImage.imageUrl}
@@ -33,7 +33,7 @@ export default function Header() {
               data-ai-hint={logoImage.imageHint}
             />
           )}
-          <div>
+          <div className="hidden sm:block">
             <div className="font-headline font-extrabold tracking-tight text-foreground text-xl leading-tight whitespace-nowrap">
               MECANO SOLUTIONS
             </div>
@@ -43,7 +43,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-muted-foreground">
+        <nav className="hidden lg:flex items-center gap-6 text-muted-foreground">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -67,14 +67,14 @@ export default function Header() {
               9 9981 3058
             </a>
           </Button>
-          <Button asChild className="shadow-orange hidden md:inline-flex">
+          <Button asChild className="shadow-orange hidden lg:inline-flex">
             <a href="#cotizacion">
               Solicitar Cotización
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="outline" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Abrir menú</span>
