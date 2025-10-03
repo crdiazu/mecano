@@ -1,12 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   const logoImage = PlaceHolderImages.find((img) => img.id === "logo");
+  const keywords = [
+    'Estanterías Metálicas Chile', 'Rack Selectivo', 'Ángulo Ranurado', 'Sistemas de Almacenaje', 'Optimización de Bodegas',
+    'Soluciones de Almacenaje', 'Estanterías Industriales', 'Logística de Almacén', 'Almacenaje Industrial', 'Rack de Paletización',
+    'Estanterías para Bodegas', 'Mecano Chile', 'Estanterías de Acero', 'Almacenamiento y Logística', 'Rack Industrial',
+    'Estanterías Modulares', 'Soluciones Logísticas', 'Almacenaje Eficiente', 'Sistemas de Rack', 'Estanterías Carga Pesada',
+    'Asesoría en Almacenaje', 'Diseño de Bodegas', 'Rack para Pallets', 'Estanterías a Medida', 'Montaje de Estanterías',
+    'Seguridad en Bodegas', 'Normativa de Almacenaje', 'Altillos Metálicos', 'Entreplantas Industriales', 'Pasillos Elevados',
+    'Estanterías Compactas', 'Almacenaje Vertical', 'Gestión de Inventario', 'Estanterías para Picking', 'Racks para Carga Manual',
+    'Almacenaje para Pymes', 'Soluciones para Retail', 'Estanterías para Archivos', 'Manejo de Materiales', 'Flujo de Mercancías',
+    'Reducción de Costos Almacén', 'Centro de Distribución', 'ISO 9001', 'NCH 2369', 'Bodegas en Santiago',
+    'Proyectos de Almacenaje', 'Estanterías Metálicas Precios', 'Venta de Racks', 'Instalación de Estanterías', 'Mantenimiento de Racks'
+  ];
 
   return (
     <footer className="w-full border-t border-border bg-background">
@@ -38,13 +50,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-2">
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="Twitter">
-                  <Twitter className="h-4 w-4" />
+                <a href="#" aria-label="LinkedIn">
+                  <Linkedin className="h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn">
-                  <Linkedin className="h-4 w-4" />
+                <a href="#" aria-label="Instagram">
+                  <Instagram className="h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -70,9 +82,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border mt-12 pt-8">
+            <h5 className="font-headline font-semibold text-foreground mb-4">Palabras Clave</h5>
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              {keywords.join(' | ')}
+            </p>
+        </div>
+
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} MECANO SOLUTIONS. Todos los derechos reservados.
+            © {new Date().getFullYear()} MECANO SOLUTIONS. Desarrollado por MarketingCloud para Pymes.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="text-muted-foreground hover:text-primary transition text-sm">Política de Privacidad</Link>

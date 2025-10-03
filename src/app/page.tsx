@@ -4,7 +4,6 @@ import ProductsSection from "@/components/landing/products-section";
 import BenefitsSection from "@/components/landing/benefits-section";
 import CertificationsSection from "@/components/landing/certifications-section";
 import QuoteSection from "@/components/landing/quote-section";
-import CoverageSection from "@/components/landing/coverage-section";
 import Footer from "@/components/landing/footer";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
         <BenefitsSection />
         <CertificationsSection />
         <QuoteSection />
-        <CoverageSection />
       </main>
       <Footer />
     </div>

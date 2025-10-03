@@ -56,17 +56,8 @@ export default function Header() {
             </div>
           </div>
         </Link>
-
-        <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map(link => (
-                <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
-                </Link>
-            ))}
-        </nav>
-
         <div className="flex items-center gap-3">
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <Button
                 variant="outline"
                 asChild
@@ -94,13 +85,6 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col h-full">
-                    <nav className="flex flex-col gap-6 mt-8">
-                        {navLinks.map(link => (
-                            <Link key={link.href} href={link.href} className="text-lg font-medium text-foreground hover:text-primary transition-colors">
-                                {link.label}
-                            </Link>
-                        ))}
-                    </nav>
                     <div className="mt-auto space-y-4">
                         <Button
                             variant="outline"

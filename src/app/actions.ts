@@ -23,14 +23,34 @@ export async function submitQuote(prevState: any, formData: FormData) {
     };
   }
 
-  // In a real application, you would process the data here:
-  // - Send an email
-  // - Save to a database
-  // - Call an external API
-  console.log("Quote submission received:", validatedFields.data);
+  // TODO: Integrate an email sending service (e.g., Resend, SendGrid)
+  // For now, this action simulates sending the data to info@mecanosolutions.cl
+  
+  const to = "info@mecanosolutions.cl";
+  const data = validatedFields.data;
 
-  // Simulate a successful submission
-  return {
-    message: "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.",
-  };
+  console.log("---- Nueva Solicitud de Cotización ----");
+  console.log(`Para: ${to}`);
+  console.log(`Nombre: ${data.name}`);
+  console.log(`Empresa: ${data.company || 'No especificada'}`);
+  console.log(`Email: ${data.email}`);
+  console.log(`Teléfono: ${data.phone || 'No especificado'}`);
+  console.log(`Producto: ${data.product}`);
+  console.log(`Mensaje: ${data.message}`);
+  console.log("-----------------------------------------");
+
+  // This is a simulation. In a real app, you would get a success/error response
+  // from your email sending service.
+  const emailSentSuccessfully = true; 
+
+  if (emailSentSuccessfully) {
+    return {
+      message: "¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.",
+    };
+  } else {
+     return {
+      errors: { _form: ["No se pudo enviar la solicitud. Por favor, inténtalo más tarde."] },
+      message: "Hubo un problema al enviar tu solicitud.",
+    };
+  }
 }
