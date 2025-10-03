@@ -38,16 +38,34 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
       <div className="container mx-auto px-6 lg:px-8 h-[120px] flex items-center justify-between">
         
-        <nav className="hidden lg:flex items-center gap-6 w-1/3">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              {link.label}
-            </Link>
-          ))}
-           <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
-              <BookOpen className="w-4 h-4"/> Blog
-            </Link>
-        </nav>
+        <div className="w-1/3">
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Abrir menú</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <div className="flex flex-col h-full p-6">
+                  <nav className="flex flex-col gap-6 mt-8">
+                      {navLinks.map((link) => (
+                        <SheetClose key={link.href} asChild>
+                          <Link href={link.href} className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                            {link.label}
+                          </Link>
+                        </SheetClose>
+                      ))}
+                      <SheetClose asChild>
+                          <Link href="/blog" className="text-lg font-medium text-foreground hover:text-primary transition-colors flex items-center gap-2">
+                              <BookOpen className="w-5 h-5"/> Blog
+                          </Link>
+                      </SheetClose>
+                  </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
 
         <div className="flex-1 flex justify-center">
             <Link href="/" className="flex items-center gap-3 group shrink-0">
@@ -91,55 +109,13 @@ export default function Header() {
                 </a>
               </Button>
             </div>
-
-          <div className="lg:hidden">
-            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Abrir menú</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col h-full p-6">
-                    <nav className="flex flex-col gap-6 mt-8">
-                        {navLinks.map((link) => (
-                          <SheetClose key={link.href} asChild>
-                            <Link href={link.href} className="text-lg font-medium text-foreground hover:text-primary transition-colors">
-                              {link.label}
-                            </Link>
-                          </SheetClose>
-                        ))}
-                        <SheetClose asChild>
-                            <Link href="/blog" className="text-lg font-medium text-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                <BookOpen className="w-5 h-5"/> Blog
-                            </Link>
-                        </SheetClose>
-                    </nav>
-                    <div className="mt-auto space-y-4">
-                        <Button
-                            variant="outline"
-                            asChild
-                            className="w-full"
-                        >
-                            <a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer">
-                            <WhatsAppIcon className="mr-2 h-5 w-5 text-green-500" />
-                            WhatsApp
-                            </a>
-                        </Button>
-                        <SheetClose asChild>
-                           <Button asChild className="shadow-orange w-full">
-                                <a href="#cotizacion">
-                                Solicitar Cotización
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                                </a>
-                            </Button>
-                        </SheetClose>
-                    </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+            <div className="sm:hidden">
+              <Button asChild size="sm" className="shadow-orange">
+                  <a href="#cotizacion">
+                    Cotizar
+                  </a>
+              </Button>
+            </div>
         </div>
       </div>
     </header>
