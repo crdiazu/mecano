@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Menu, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Sheet,
   SheetContent,
@@ -27,7 +25,6 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 export default function Header() {
-  const logoImage = PlaceHolderImages.find((img) => img.id === "logo");
   const navLinks = [
     { href: "/#productos", label: "Productos" },
     { href: "/#beneficios", label: "Beneficios" },
@@ -36,9 +33,9 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
-      <div className="container mx-auto px-6 lg:px-8 h-[120px] flex items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-8 h-[80px] flex items-center justify-end">
         
-        <div className="flex items-center justify-start gap-3 w-1/3">
+        <div className="flex items-center justify-end gap-3">
             <div className="hidden sm:flex items-center gap-3">
               <Button
                 variant="outline"
@@ -63,25 +60,7 @@ export default function Header() {
                   </a>
               </Button>
             </div>
-        </div>
-
-        <div className="flex-1 flex justify-center">
-            <Link href="/" className="flex items-center gap-3 group shrink-0">
-            {logoImage && (
-                <Image
-                src={logoImage.imageUrl}
-                alt={logoImage.description}
-                width={102}
-                height={102}
-                className="w-28 h-28 lg:w-32 lg:h-32 object-contain"
-                data-ai-hint={logoImage.imageHint}
-                />
-            )}
-            </Link>
-        </div>
-
-
-        <div className="w-1/3 flex justify-end">
+        
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">

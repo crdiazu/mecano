@@ -12,6 +12,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 export default function HeroSection() {
   const [offsetY, setOffsetY] = useState(0);
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero");
+  const logoImage = PlaceHolderImages.find((img) => img.id === "logo");
 
   const handleScroll = () => {
     if (window.innerWidth > 768) { // Only apply parallax on desktop
@@ -25,7 +26,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center">
+    <section className="relative overflow-hidden w-full h-screen min-h-[700px] flex items-center justify-center text-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-background z-20"></div>
@@ -44,6 +45,17 @@ export default function HeroSection() {
 
       <div className="relative z-30 container mx-auto px-6 lg:px-8 py-16">
         <Reveal>
+          {logoImage && (
+            <Image
+              src={logoImage.imageUrl}
+              alt={logoImage.description}
+              width={180}
+              height={180}
+              className="w-40 h-40 lg:w-48 lg:h-48 object-contain mx-auto mb-6"
+              data-ai-hint={logoImage.imageHint}
+              priority
+            />
+          )}
           <h1 className="font-headline font-extrabold tracking-tight text-5xl lg:text-7xl mb-4 text-white">
             Sistemas de Almacenaje modulares en Acero{" "}
             <span className="text-primary">MECANO SOLUTIONS</span>
