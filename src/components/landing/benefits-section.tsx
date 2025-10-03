@@ -1,7 +1,10 @@
+"use client";
+
 import { Check, Clock, Plus } from 'lucide-react';
 import Image from 'next/image';
 import Reveal from '@/components/client/reveal';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useState, useEffect } from 'react';
 
 const benefits = [
   {
@@ -28,35 +31,50 @@ const benefits = [
 ];
 
 export default function BenefitsSection() {
-  const bgImage = PlaceHolderImages.find(img => img.id === 'benefits-bg');
+  const [offsetY, setOffsetY] = useState(0);
+  const bgImage = PlaceHolderImages.find(img => img.id === 'full-space');
+
+  const handleScroll = () => {
+    if (window.innerWidth > 768) { // Only apply parallax on desktop
+      setOffsetY(window.pageYOffset);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
     <section id="beneficios" className="relative w-full py-20 lg:py-28 overflow-hidden">
       {bgImage && (
         <div className="absolute inset-0 z-0">
+           <div className="absolute inset-0 bg-black/60 z-10"></div>
+           <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-background z-20"></div>
           <Image
             src={bgImage.imageUrl}
             alt={bgImage.description}
             fill
-            className="object-cover filter blur-sm scale-110"
+            className="object-cover"
+            style={{ transform: `translateY(${offsetY * 0.2}px)` }}
             data-ai-hint={bgImage.imageHint}
           />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
         </div>
       )}
       <div className="relative z-10 container mx-auto px-6 lg:px-8">
         <Reveal className="text-center mb-12">
-          <h2 className="font-headline font-extrabold tracking-tight text-3xl lg:text-4xl">
+          <h2 className="font-headline font-extrabold tracking-tight text-3xl lg:text-4xl text-white">
             Ventajas de Nuestras Estanterías Metálicas Industriales
           </h2>
-          <p className="mt-3 text-muted-foreground text-lg">
+          <p className="mt-3 text-slate-200 text-lg">
             Certificación, modularidad e instalación profesional para tu almacén
           </p>
         </Reveal>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <Reveal key={benefit.title} delay={index * 100}>
-              <div className="p-6 rounded-2xl bg-card/50 border border-border h-full hover:-translate-y-1 hover:shadow-orange transition-all duration-300">
+              <div className="p-6 rounded-2xl bg-card/50 border border-border h-full hover:-translate-y-1 hover:shadow-orange transition-all duration-300 backdrop-blur-sm">
                 <div className={`w-12 h-12 rounded-lg ${benefit.bgColor} flex items-center justify-center mb-4`}>
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} strokeWidth={2.5} />
                 </div>
