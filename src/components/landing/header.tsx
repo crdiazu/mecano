@@ -5,6 +5,11 @@ import Image from "next/image";
 import { ArrowRight, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -21,6 +26,12 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export default function Header() {
   const logoImage = PlaceHolderImages.find((img) => img.id === "logo");
+  const navLinks = [
+    { href: "/#productos", label: "Productos" },
+    { href: "/blog", label: "Blog" },
+    { href: "/#beneficios", label: "Beneficios" },
+    { href: "/#certificaciones", label: "Certificaciones" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
@@ -46,22 +57,72 @@ export default function Header() {
           </div>
         </Link>
 
+        <nav className="hidden lg:flex items-center gap-6">
+            {navLinks.map(link => (
+                <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                    {link.label}
+                </Link>
+            ))}
+        </nav>
+
         <div className="flex items-center gap-3">
-          <Button
-            variant="outline"
-            asChild
-          >
-            <a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer">
-              <WhatsAppIcon className="mr-2 h-5 w-5 text-green-500" />
-              WhatsApp
-            </a>
-          </Button>
-          <Button asChild className="shadow-orange">
-            <a href="#cotizacion">
-              Solicitar Cotización
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+            <div className="hidden lg:flex items-center gap-3">
+              <Button
+                variant="outline"
+                asChild
+              >
+                <a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="mr-2 h-5 w-5 text-green-500" />
+                  WhatsApp
+                </a>
+              </Button>
+              <Button asChild className="shadow-orange">
+                <a href="#cotizacion">
+                  Solicitar Cotización
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Abrir menú</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <div className="flex flex-col h-full">
+                    <nav className="flex flex-col gap-6 mt-8">
+                        {navLinks.map(link => (
+                            <Link key={link.href} href={link.href} className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+                    <div className="mt-auto space-y-4">
+                        <Button
+                            variant="outline"
+                            asChild
+                            className="w-full"
+                        >
+                            <a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer">
+                            <WhatsAppIcon className="mr-2 h-5 w-5 text-green-500" />
+                            WhatsApp
+                            </a>
+                        </Button>
+                        <Button asChild className="shadow-orange w-full">
+                            <a href="#cotizacion">
+                            Solicitar Cotización
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                            </a>
+                        </Button>
+                    </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
