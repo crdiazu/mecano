@@ -37,28 +37,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-background/90 border-b border-border w-full">
       <div className="container mx-auto px-6 lg:px-8 h-[120px] flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group shrink-0">
-          {logoImage && (
-            <Image
-              src={logoImage.imageUrl}
-              alt={logoImage.description}
-              width={160}
-              height={160}
-              className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
-              data-ai-hint={logoImage.imageHint}
-            />
-          )}
-          <div className="hidden sm:block">
-            <div className="font-headline font-extrabold tracking-tight text-foreground text-xl leading-tight whitespace-nowrap">
-              MECANO SOLUTIONS
-            </div>
-            <div className="text-muted-foreground text-sm">
-              Almacenaje Modular en Acero
-            </div>
-          </div>
-        </Link>
-
-        <nav className="hidden lg:flex items-center gap-6">
+        
+        <nav className="hidden lg:flex items-center gap-6 w-1/3">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               {link.label}
@@ -69,7 +49,31 @@ export default function Header() {
             </Link>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex-1 flex justify-center">
+            <Link href="/" className="flex items-center gap-3 group shrink-0">
+            {logoImage && (
+                <Image
+                src={logoImage.imageUrl}
+                alt={logoImage.description}
+                width={128}
+                height={128}
+                className="w-28 h-28 lg:w-32 lg:h-32 object-contain"
+                data-ai-hint={logoImage.imageHint}
+                />
+            )}
+            <div className="hidden sm:block">
+                <div className="font-headline font-extrabold tracking-tight text-foreground text-xl leading-tight whitespace-nowrap">
+                MECANO SOLUTIONS
+                </div>
+                <div className="text-muted-foreground text-sm">
+                Almacenaje Modular en Acero
+                </div>
+            </div>
+            </Link>
+        </div>
+
+
+        <div className="flex items-center justify-end gap-3 w-1/3">
             <div className="hidden sm:flex items-center gap-3">
               <Button
                 variant="outline"
