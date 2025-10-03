@@ -50,12 +50,12 @@ export default function Footer() {
             </p>
             <div className="flex gap-2">
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#0077B5] hover:text-white hover:bg-[#0077B5]">
                   <Linkedin className="h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="Instagram">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#E1306C] hover:text-white hover:bg-[#E1306C]">
                   <Instagram className="h-4 w-4" />
                 </a>
               </Button>
@@ -91,7 +91,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} MECANO SOLUTIONS. Desarrollado por MarketingCloud para Pymes.
+            © {new Date().getFullYear()} MECANO SOLUTIONS. <a href="http://www.marketingcloud.cl" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">Desarrollado por MarketingCloud para Pymes.</a>
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="text-muted-foreground hover:text-primary transition text-sm">Política de Privacidad</Link>

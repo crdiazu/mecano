@@ -2,7 +2,7 @@ import Header from "@/components/landing/header";
 import HeroSection from "@/components/landing/hero-section";
 import ProductsSection from "@/components/landing/products-section";
 import BenefitsSection from "@/components/landing/benefits-section";
-import CertificationsSection from "@/components/landing/certifications-section";
+import CtaSection from "@/components/landing/cta-section";
 import QuoteSection from "@/components/landing/quote-section";
 import Footer from "@/components/landing/footer";
 
@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection />
         <ProductsSection />
         <BenefitsSection />
-        <CertificationsSection />
+        <CtaSection />
         <QuoteSection />
       </main>
       <Footer />
