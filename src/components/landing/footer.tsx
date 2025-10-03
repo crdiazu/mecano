@@ -63,9 +63,9 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-semibold text-foreground mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>+56 9 9981 3058</li>
+              <li><a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">+56 9 9981 3058</a></li>
               <li>contacto@mecanosolutions.cl</li>
-              <li>Av. Industrial 1234<br/>Santiago, Chile</li>
+              <li>Cabrero 232<br/>San Bernardo, Chile</li>
             </ul>
           </div>
         </div>
