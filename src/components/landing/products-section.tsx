@@ -11,6 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { DialogClose } from '../ui/dialog';
 
 const products = [
   {
@@ -115,16 +116,18 @@ export default function ProductsSection() {
                               {product.longDescription}
                             </DialogDescription>
                           </DialogHeader>
-                          <div className="mt-4 flex justify-end gap-2">
+                          <div className="mt-4 flex justify-between items-center">
                             <Button variant="outline" asChild>
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                                     <WhatsAppIcon className="mr-2 h-5 w-5 text-green-500" />
                                     Cotizar por WhatsApp
                                 </a>
                             </Button>
-                             <a href="#cotizacion">
-                              <Button className="shadow-orange">Solicitar Cotización</Button>
-                             </a>
+                             <DialogClose asChild>
+                                <a href="#cotizacion">
+                                <Button className="shadow-orange">Solicitar Cotización</Button>
+                                </a>
+                             </DialogClose>
                           </div>
                         </DialogContent>
                       </Dialog>
