@@ -3,49 +3,49 @@
     {
       "id": "logo",
       "description": "Mecano Solutions Logo",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/logo-mecano.png",
+      "imageUrl": "https://images.unsplash.com/photo-1754837369018-ff35655d126f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dvJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5NzIwNDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logo abstract"
     },
     {
       "id": "hero",
       "description": "Estanterías metálicas industriales en una bodega grande",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/bodega-header.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1601602899110-201f02bd3cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3YXJlaG91c2UlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk3ODAyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "warehouse shelving"
     },
     {
       "id": "rack-selectivo",
       "description": "Rack selectivo para almacenaje industrial",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/rack-selectivo.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYWxsZXQlMjByYWNraW5nfGVufDB8fHx8MTc1OTc4MDI1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pallet racking"
     },
     {
       "id": "angulo-ranurado",
       "description": "Estantería de ángulo ranurado modular",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/angulo-ranurado.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1722859031320-00012b00e8ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZXRhbCUyMHNoZWx2ZXN8ZW58MHx8fHwxNzU5NzgwMjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "metal shelves"
     },
     {
       "id": "full-space",
       "description": "Estantería móvil Full Space para maximizar espacio",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/full-space.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1670885158896-7c60af1ed5a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk3ODAyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile shelving"
     },
     {
       "id": "altillo-estructural",
       "description": "Altillo estructural o mesanina en una bodega",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/altillos.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1652013368364-c831609f691a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZXp6YW5pbmUlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzU5NzgwMjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mezzanine warehouse"
     },
     {
       "id": "benefits-bg",
       "description": "Fondo para la sección de beneficios",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/beneficios.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aW5kdXN0cmlhbCUyMHdhcmVob3VzZXxlbnwwfHx8fDE3NTk3NDg3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "industrial warehouse"
     },
     {
       "id": "certifications-bg",
       "description": "Fondo para la sección de certificaciones",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2024/07/certificaciones.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU5NzY4MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern architecture"
     }
   ]
