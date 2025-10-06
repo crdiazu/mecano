@@ -3,49 +3,49 @@
     {
       "id": "logo",
       "description": "Mecano Solutions Logo",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/Logo.png",
+      "imageUrl": "https://images.unsplash.com/photo-1754837369018-ff35655d126f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dvJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5NzIwNDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logo abstract"
     },
     {
       "id": "hero",
       "description": "Estanterías metálicas industriales en una bodega grande",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/RackSelectivo1.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1736507748808-31bb64ce6fcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk3ODAyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "warehouse shelving"
     },
     {
       "id": "rack-selectivo",
       "description": "Rack selectivo para almacenaje industrial",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/RackSelectivo1.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1584972622551-f153577e847a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYWxsZXQlMjByYWNraW5nfGVufDB8fHx8MTc1OTc4MDI1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pallet racking"
     },
     {
       "id": "angulo-ranurado",
       "description": "Estantería de ángulo ranurado modular",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/estanteriaanguloranurado.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1700786035542-d7a05d5f05d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZXRhbCUyMHNoZWx2ZXN8ZW58MHx8fHwxNzU5NzgwMjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "metal shelves"
     },
     {
       "id": "full-space",
       "description": "Estantería móvil Full Space para maximizar espacio",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/estanteriafullspace2.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1758611972975-5b7e6568eeeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBzaGVsdmluZ3xlbnwwfHx8fDE3NTk3ODAyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile shelving"
     },
     {
       "id": "altillo-estructural",
       "description": "Altillo estructural o mesanina en una bodega",
-      "imageUrl": "https://mecanosolutions.cl/wp-content/uploads/2025/10/altilloestructural.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1697869812795-8a8014cd53a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZXp6YW5pbmUlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzU5NzgwMjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mezzanine warehouse"
     },
     {
       "id": "benefits-bg",
       "description": "Fondo para la sección de beneficios",
-      "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlfGVufDB8fHx8MTc1OTQ3NTAzNnww&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557761469-f29c6e201784?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlfGVufDB8fHx8MTc1OTc0ODc0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "industrial warehouse"
     },
     {
       "id": "certifications-bg",
       "description": "Fondo para la sección de certificaciones",
-      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU5NDc5MjA5fDA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU5NzY4MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern architecture"
     }
   ]
