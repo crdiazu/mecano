@@ -100,7 +100,7 @@ bodyContent = bodyContent.replace(
 );
 bodyContent = bodyContent.replace(
     /<\/section>\s*<section id="productos"/,
-    `    </div>\n        </section>\n\n        <section id="productos"`
+    `    </section>\n\n        <section id="productos"`
 );
 
 bodyContent = bodyContent.replace(

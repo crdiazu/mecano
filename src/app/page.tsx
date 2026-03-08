@@ -174,8 +174,7 @@ export default function Home() {
                         Cotización</span>
                 </div>
             </div>
-            </div>
-        </section>
+            </section>
 
         <section id="productos" className="py-24 relative overflow-hidden bg-white">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
