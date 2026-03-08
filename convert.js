@@ -96,7 +96,7 @@ bodyContent = bodyContent.replace(
         <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
             <img src="/images/productos/estanteria full space.jpg" alt="Estanterías MECANO" className="w-full h-full object-cover grayscale" />
         </div>
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">$1</section>`
+        <div className="relative z-10 w-full">$1</div></section>`
 );
 
 bodyContent = bodyContent.replace(
