@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: '/images/logo/logo2.png',
+    apple: '/images/logo/logo2.png',
+    shortcut: '/images/logo/logo2.png',
+  },
   themeColor: '#F28C38',
   openGraph: {
     title: 'Estanterías Metálicas Chile | Rack Selectivo y Ángulo Ranurado | MECANO SOLUTIONS',
