@@ -73,10 +73,39 @@ bodyContent = bodyContent.replace(
 
 
 
+// UX Improvements
+bodyContent = bodyContent.replace(
+    /<header className="fixed top-0 w-full z-50 bg-white\/90 backdrop-blur-md border-b border-mecano-slate\/10">/,
+    '<header className={`fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b transition-transform duration-500 will-change-transform ${isScrollingUp ? \'translate-y-0 border-mecano-slate/10 shadow-sm\' : \'-translate-y-full border-transparent\'}`}>'
+);
+
+bodyContent = bodyContent.replace(
+    /<a href="(#[^"]+)"\s*className="text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">([^<]+)<\/a>/g,
+    '<a href="$1" className="relative group text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">$2<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-mecano-orange transition-all duration-300 group-hover:w-full"></span></a>'
+);
+
+bodyContent = bodyContent.replace(
+    /<button\s*className="bg-mecano-orange text-white px-8 py-3 font-display font-700 text-xs uppercase tracking-\[0\.1em\] hover:bg-mecano-slate transition-all transform hover:-translate-y-0\.5 shadow-lg shadow-mecano-orange\/20">\s*Cotizar Proyecto\s*<\/button>/g,
+    '<button onClick={() => document.getElementById(\'contacto\')?.scrollIntoView({ behavior: \'smooth\' })} className="bg-mecano-orange text-white px-8 py-3 font-display font-700 text-xs uppercase tracking-[0.1em] hover:bg-mecano-slate transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-mecano-orange/20 hover:shadow-mecano-slate/30 active:scale-95 group relative overflow-hidden"><span className="relative z-10 block transition-transform duration-300 group-hover:scale-105">Cotizar Proyecto</span><div className="absolute inset-0 h-full w-full scale-0 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-150"></div></button>'
+);
+
 const pageTsx = `'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+    const [isScrollingUp, setIsScrollingUp] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            setIsScrollingUp(currentScrollY < lastScrollY || currentScrollY < 50);
+            setLastScrollY(currentScrollY);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
     useEffect(() => {
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
