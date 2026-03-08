@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: 'https://www.mecanosolutions.cl/',
     images: [
       {
-        url: 'https://picsum.photos/seed/mecano-og/1200/630',
+        url: 'https://www.mecanosolutions.cl/images/logo/logo2.png',
         width: 1200,
         height: 630,
         alt: 'MECANO SOLUTIONS - Estanterías metálicas',
