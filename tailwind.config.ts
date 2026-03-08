@@ -12,9 +12,13 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Montserrat', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
+        'mecano-orange': '#F28C38',
+        'mecano-slate': '#1E293B',
+        'mecano-gray': '#F1F5F9',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

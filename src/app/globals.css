@@ -93,3 +93,21 @@ body {
     @apply bg-primary/20;
   }
 }
+
+@layer utilities {
+  .industrial-grid {
+      background-image: radial-gradient(#1e293b 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+  }
+  .text-stroke {
+      -webkit-text-stroke: 1px rgba(242, 140, 56, 0.3);
+      color: transparent;
+  }
+  .animate-reveal {
+      animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes reveal {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+  }
+}
