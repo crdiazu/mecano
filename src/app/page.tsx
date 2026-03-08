@@ -51,9 +51,9 @@ export default function Home() {
                 <a href="#proyectos" className="relative group text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">Proyectos<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-mecano-orange transition-all duration-300 group-hover:w-full"></span></a>
                 <a href="#certificaciones" className="relative group text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">Normativa<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-mecano-orange transition-all duration-300 group-hover:w-full"></span></a>
                 <div className="h-8 w-px bg-mecano-slate/10"></div>
-                <a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer" className="text-xs font-700 tracking-tighter">
+                <a href="tel:+56223456789" className="text-xs font-700 tracking-tighter">
                     <span className="block text-mecano-orange uppercase">Línea Técnica</span>
-                    +56 9 9981 3058
+                    +56 2 2345 6789
                 </a>
             </nav>
 
@@ -353,8 +353,8 @@ export default function Home() {
                                     <span
                                         className="block text-[10px] font-bold text-mecano-slate/40 uppercase tracking-widest">Email
                                         Corporativo</span>
-                                    <a href="mailto:cabarca@mecanosolutions.cl"
-                                        className="text-xl font-display font-800 text-mecano-slate tracking-tight hover:text-mecano-orange transition-colors">cabarca@mecanosolutions.cl</a>
+                                    <span
+                                        className="text-xl font-display font-800 text-mecano-slate tracking-tight">contacto@mecanosolutions.cl</span>
                                 </div>
                             </div>
                             <div className="flex items-center gap-6">
