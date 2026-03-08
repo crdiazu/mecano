@@ -35,7 +35,7 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
             
             <div className="flex items-center gap-3 group cursor-pointer">
-                <img src="/images/logo/MECANO.png" alt="MECANO Solutions" className="h-12 w-auto transition-transform group-hover:scale-105" />
+                <img src="/images/logo/logo2.png" alt="MECANO Solutions" className="h-10 w-auto transition-transform group-hover:scale-105" />
             </div>
 
             

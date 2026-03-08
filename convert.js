@@ -46,7 +46,7 @@ svgAttributes.forEach(attr => {
 // Replace logos
 bodyContent = bodyContent.replace(
     /<div\s+className="w-10 h-10 bg-mecano-slate flex items-center justify-center rounded-sm transition-transform group-hover:rotate-12">[\s\S]*?<\/svg>\s*<\/div>\s*<div className="flex flex-col gap-0">\s*<span className="font-display font-800 text-xl leading-none tracking-tighter uppercase">MECANO<\/span>\s*<span\s*className="text-\[10px\] font-semibold text-mecano-orange tracking-\[0\.2em\] leading-none uppercase">SOLUTIONS<\/span>\s*<\/div>/g,
-    '<img src="/images/logo/MECANO.png" alt="MECANO Solutions" className="h-12 w-auto transition-transform group-hover:scale-105" />'
+    '<img src="/images/logo/logo2.png" alt="MECANO Solutions" className="h-10 w-auto transition-transform group-hover:scale-105" />'
 );
 
 bodyContent = bodyContent.replace(
