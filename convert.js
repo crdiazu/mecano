@@ -140,14 +140,8 @@ export default function Home() {
         }, observerOptions);
 
         document.querySelectorAll('section').forEach(section => {
-            if (!section.classList.contains('bg-mecano-slate') || section.id === 'contacto') {
-                section.classList.add('opacity-0');
-                observer.observe(section);
-            } else {
-                 section.classList.add('opacity-0');
-                 observer.observe(section);
-            }
-            
+            section.classList.add('opacity-0');
+            observer.observe(section);
         });
 
         return () => observer.disconnect();
