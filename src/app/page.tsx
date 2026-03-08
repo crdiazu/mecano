@@ -35,18 +35,7 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
             
             <div className="flex items-center gap-3 group cursor-pointer">
-                <div
-                    className="w-10 h-10 bg-mecano-slate flex items-center justify-center rounded-sm transition-transform group-hover:rotate-12">
-                    <svg viewBox="0 0 24 24" className="w-6 h-6 text-mecano-orange fill-current">
-                        <path
-                            d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5zm0 18c-3.11-1.12-7-5.11-7-9V8.5l7-3.5 7 3.5V11c0 3.89-3.89 7.88-7 9z" />
-                    </svg>
-                </div>
-                <div className="flex flex-col gap-0">
-                    <span className="font-display font-800 text-xl leading-none tracking-tighter uppercase">MECANO</span>
-                    <span
-                        className="text-[10px] font-semibold text-mecano-orange tracking-[0.2em] leading-none uppercase">SOLUTIONS</span>
-                </div>
+                <img src="/images/logo/MECANO.png" alt="MECANO Solutions" className="h-12 w-auto transition-transform group-hover:scale-105" />
             </div>
 
             
@@ -238,9 +227,7 @@ export default function Home() {
                             <span className="text-mecano-slate font-bold text-xs uppercase tracking-widest">Cotización
                                 Express</span>
                         </div>
-                        <div
-                            className="absolute -right-20 -bottom-20 w-80 h-80 border-[40px] border-white/10 rounded-full group-hover:scale-125 transition-transform duration-1000">
-                        </div>
+                        <div className="absolute -right-20 -bottom-20 w-80 h-80 opacity-20 group-hover:scale-125 transition-transform duration-1000"><img src="/images/productos/estaterias angulo ranurado.png" alt="Ángulo Ranurado" className="w-full h-full object-cover object-left-top mix-blend-multiply" /></div>
                     </div>
 
                     
@@ -447,11 +434,7 @@ export default function Home() {
         <div
             className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
             <div className="flex items-center gap-12">
-                <div className="flex flex-col gap-0">
-                    <span className="font-display font-900 text-3xl leading-none tracking-tighter uppercase">MECANO</span>
-                    <span
-                        className="text-[10px] font-semibold text-mecano-orange tracking-[0.3em] leading-none uppercase">SOLUTIONS</span>
-                </div>
+                <img src="/images/logo/Logo.png" alt="MECANO Solutions" className="h-10 w-auto opacity-80" />
                 <div className="hidden md:block h-12 w-px bg-white/10"></div>
                 <p className="text-[10px] font-500 text-white/40 max-w-[200px] uppercase leading-relaxed tracking-widest">
                     Expertos en soluciones de almacenaje certificadas. Carretera Gral. San Martín, Colina.

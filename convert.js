@@ -43,6 +43,35 @@ svgAttributes.forEach(attr => {
     bodyContent = bodyContent.replace(new RegExp(attr + '=', 'g'), camel + '=');
 });
 
+// Replace logos
+bodyContent = bodyContent.replace(
+    /<div\s+className="w-10 h-10 bg-mecano-slate flex items-center justify-center rounded-sm transition-transform group-hover:rotate-12">[\s\S]*?<\/svg>\s*<\/div>\s*<div className="flex flex-col gap-0">\s*<span className="font-display font-800 text-xl leading-none tracking-tighter uppercase">MECANO<\/span>\s*<span\s*className="text-\[10px\] font-semibold text-mecano-orange tracking-\[0\.2em\] leading-none uppercase">SOLUTIONS<\/span>\s*<\/div>/g,
+    '<img src="/images/logo/MECANO.png" alt="MECANO Solutions" className="h-12 w-auto transition-transform group-hover:scale-105" />'
+);
+
+bodyContent = bodyContent.replace(
+    /<div className="flex flex-col gap-0">\s*<span className="font-display font-900 text-3xl leading-none tracking-tighter uppercase">MECANO<\/span>\s*<span\s*className="text-\[10px\] font-semibold text-mecano-orange tracking-\[0\.3em\] leading-none uppercase">SOLUTIONS<\/span>\s*<\/div>/g,
+    '<img src="/images/logo/Logo.png" alt="MECANO Solutions" className="h-10 w-auto opacity-80" />'
+);
+
+
+// Replace specific product images
+bodyContent = bodyContent.replace(
+    /<img  src="https:\/\/images.unsplash.com\/photo-1586528116311-ad8dd3c8310d\?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"\s*alt="Warehouse structural racks" className="w-full h-full object-cover" \/>/g,
+    '<img src="/images/productos/rackselectivo.jpg" alt="Warehouse structural racks" className="w-full h-full object-cover" />'
+);
+
+bodyContent = bodyContent.replace(
+    /<img  src="https:\/\/images.unsplash.com\/photo-1586528116311-ad8dd3c8310d\?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"\s*alt="Rack Selectivo"\s*className="w-full h-full object-cover grayscale brightness-50 transition-transform duration-700 group-hover:scale-110" \/>/g,
+    '<img src="/images/productos/rack selectivo.png" alt="Rack Selectivo" className="w-full h-full object-cover grayscale brightness-50 transition-transform duration-700 group-hover:scale-110" />'
+);
+
+bodyContent = bodyContent.replace(
+    /<div\s*className="absolute -right-20 -bottom-20 w-80 h-80 border-\[40px\] border-white\/10 rounded-full group-hover:scale-125 transition-transform duration-1000">\s*<\/div>/g,
+    '<div className="absolute -right-20 -bottom-20 w-80 h-80 opacity-20 group-hover:scale-125 transition-transform duration-1000"><img src="/images/productos/estaterias angulo ranurado.png" alt="Ángulo Ranurado" className="w-full h-full object-cover object-left-top mix-blend-multiply" /></div>'
+);
+
+
 
 const pageTsx = `'use client';
 import { useEffect } from 'react';
