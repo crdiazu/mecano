@@ -147,24 +147,27 @@ export default function Home() {
         </section>
 
         
-        <section className="bg-mecano-slate py-16 border-y border-white/5 relative z-10 shadow-2xl">
-            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-mecano-orange/10 via-transparent to-transparent pointer-events-none"></div>
-            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8 divide-x divide-white/10 text-white">
-                <div className="flex flex-col items-center justify-center group hover:-translate-y-1 transition-transform duration-300">
-                    <span className="text-mecano-orange font-display font-900 text-5xl md:text-6xl tracking-tighter group-hover:drop-shadow-[0_0_15px_rgba(242,140,56,0.5)] transition-all">15+</span>
-                    <span className="text-[10px] uppercase font-700 tracking-[0.2em] text-white/50 mt-2 block group-hover:text-white/80 transition-colors">Años Expertiz</span>
+        <section className="bg-mecano-gray py-12 border-b border-mecano-slate/5">
+            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="flex flex-col">
+                    <span className="text-mecano-orange font-display font-800 text-4xl">15+</span>
+                    <span className="text-[10px] uppercase font-700 tracking-widest text-mecano-slate/60">Años
+                        Expertiz</span>
                 </div>
-                <div className="flex flex-col items-center justify-center group hover:-translate-y-1 transition-transform duration-300">
-                    <span className="text-mecano-orange font-display font-900 text-5xl md:text-6xl tracking-tighter group-hover:drop-shadow-[0_0_15px_rgba(242,140,56,0.5)] transition-all">800+</span>
-                    <span className="text-[10px] uppercase font-700 tracking-[0.2em] text-white/50 mt-2 block group-hover:text-white/80 transition-colors">Proyectos RM</span>
+                <div className="flex flex-col">
+                    <span className="text-mecano-orange font-display font-800 text-4xl">800+</span>
+                    <span className="text-[10px] uppercase font-700 tracking-widest text-mecano-slate/60">Proyectos
+                        RM</span>
                 </div>
-                <div className="flex flex-col items-center justify-center group hover:-translate-y-1 transition-transform duration-300">
-                    <span className="text-mecano-orange font-display font-900 text-5xl md:text-6xl tracking-tighter group-hover:drop-shadow-[0_0_15px_rgba(242,140,56,0.5)] transition-all">100%</span>
-                    <span className="text-[10px] uppercase font-700 tracking-[0.2em] text-white/50 mt-2 block group-hover:text-white/80 transition-colors">Acero Nacional</span>
+                <div className="flex flex-col">
+                    <span className="text-mecano-orange font-display font-800 text-4xl">100%</span>
+                    <span className="text-[10px] uppercase font-700 tracking-widest text-mecano-slate/60">Acero
+                        Nacional</span>
                 </div>
-                <div className="flex flex-col items-center justify-center group hover:-translate-y-1 transition-transform duration-300">
-                    <span className="text-mecano-orange font-display font-900 text-5xl md:text-6xl tracking-tighter group-hover:drop-shadow-[0_0_15px_rgba(242,140,56,0.5)] transition-all">24h</span>
-                    <span className="text-[10px] uppercase font-700 tracking-[0.2em] text-white/50 mt-2 block group-hover:text-white/80 transition-colors">Plazo Cotización</span>
+                <div className="flex flex-col">
+                    <span className="text-mecano-orange font-display font-800 text-4xl">24h</span>
+                    <span className="text-[10px] uppercase font-700 tracking-widest text-mecano-slate/60">Plazo
+                        Cotización</span>
                 </div>
             </div>
         </section>
@@ -434,65 +437,28 @@ export default function Home() {
         </section>
     </main>
 
-    <footer className="bg-mecano-slate pt-24 pb-12 text-white overflow-hidden relative border-t-[8px] border-mecano-orange">
-        <div className="absolute inset-0 opacity-5 pointer-events-none industrial-grid"></div>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-20">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20 border-b border-white/10 pb-16">
-                
-                <div className="md:col-span-5 flex flex-col gap-6">
-                    <img src="/images/logo/Logo.png" alt="MECANO Solutions" className="h-10 w-auto opacity-90 object-contain self-start" />
-                    <p className="text-sm font-400 text-white/50 max-w-sm leading-relaxed mt-4">
-                        Expertos en soluciones de almacenaje estructurales. Ingeniería y desarrollo de sistemas modulares para la optimización crítica de espacios industriales en Chile.
-                    </p>
-                    <div className="flex gap-4 mt-2">
-                        <div className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-mecano-orange hover:border-mecano-orange transition-all cursor-pointer group">
-                            <span className="text-white/50 group-hover:text-white font-bold text-xs">IN</span>
-                        </div>
-                        <div className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-mecano-orange hover:border-mecano-orange transition-all cursor-pointer group">
-                            <svg className="w-4 h-4 fill-white/50 group-hover:fill-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.146-.069-.329-.094-.744-.246-1.575-.591-1.398-.581-2.296-2.013-2.366-2.106-.07-.092-.563-.748-.563-1.425 0-.677.352-1.011.478-1.151.126-.14.276-.175.367-.175.092 0 .183.001.263.005.086.003.203-.032.317.243.117.281.401.979.436 1.049.035.07.059.151.012.243-.046.092-.07.151-.139.232-.07.081-.146.182-.209.244-.07.07-.143.147-.061.288.082.141.365.603.782.975.539.48 1.002.619 1.142.69.141.071.223.058.305-.035s.352-.406.446-.546c.093-.141.187-.117.316-.07.13.047.82.387.962.457s.236.105.271.162c.036.059.035.342-.109.747z" /></svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="md:col-span-3 flex flex-col gap-6">
-                    <span className="text-mecano-orange font-700 text-[10px] uppercase tracking-widest">Navegación</span>
-                    <ul className="flex flex-col gap-3">
-                        <li><a href="#productos" className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2 group"><span className="w-0 h-px bg-mecano-orange group-hover:w-4 transition-all"></span>Sistemas Modulares</a></li>
-                        <li><a href="#certificaciones" className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2 group"><span className="w-0 h-px bg-mecano-orange group-hover:w-4 transition-all"></span>Normativa y Diseño</a></li>
-                        <li><a href="#proyectos" className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2 group"><span className="w-0 h-px bg-mecano-orange group-hover:w-4 transition-all"></span>Casos de Éxito</a></li>
-                        <li><a href="#contacto" className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2 group"><span className="w-0 h-px bg-mecano-orange group-hover:w-4 transition-all"></span>Portal de Cotización</a></li>
-                    </ul>
-                </div>
-
-                <div className="md:col-span-4 flex flex-col gap-6">
-                    <span className="text-mecano-orange font-700 text-[10px] uppercase tracking-widest">Base de Operaciones</span>
-                    <ul className="flex flex-col gap-4">
-                        <li className="flex gap-4 items-start">
-                            <span className="w-6 h-6 border border-white/10 flex items-center justify-center shrink-0 text-white/40">⌖</span>
-                            <div>
-                                <span className="block text-white/80 text-sm">Carretera Gral. San Martín Mz. A sitio 18</span>
-                                <span className="block text-white/40 text-xs mt-1">Colina, Región Metropolitana</span>
-                            </div>
-                        </li>
-                        <li className="flex gap-4 items-center">
-                            <span className="w-6 h-6 border border-white/10 flex items-center justify-center shrink-0 text-white/40">📞</span>
-                            <span className="text-white/80 text-sm font-mono">+56 2 2345 6789</span>
-                        </li>
-                        <li className="flex gap-4 items-center">
-                            <span className="w-6 h-6 border border-white/10 flex items-center justify-center shrink-0 text-white/40">✉</span>
-                            <span className="text-white/80 text-sm hover:text-mecano-orange transition-colors cursor-pointer">contacto@mecanosolutions.cl</span>
-                        </li>
-                    </ul>
-                </div>
+    <footer className="bg-black py-16 text-white overflow-hidden relative">
+        <div
+            className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
+            <div className="flex items-center gap-12">
+                <img src="/images/logo/Logo.png" alt="MECANO Solutions" className="h-10 w-auto opacity-80" />
+                <div className="hidden md:block h-12 w-px bg-white/10"></div>
+                <p className="text-[10px] font-500 text-white/40 max-w-[200px] uppercase leading-relaxed tracking-widest">
+                    Expertos en soluciones de almacenaje certificadas. Carretera Gral. San Martín, Colina.
+                </p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">© {new Date().getFullYear()} Mecano Solutions Chile. Todos los derechos reservados.</span>
-                <span className="text-[10px] font-medium text-white/20 uppercase tracking-[0.4em]">Optimización Crítica de Espacios</span>
+            <div className="flex flex-col items-end gap-2">
+                <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">© 2024 Mecano Solutions
+                    Chile</span>
+                <span className="text-[9px] font-medium text-white/20 uppercase tracking-[0.4em]">Optimización Crítica de
+                    Espacios</span>
             </div>
         </div>
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display font-900 text-white/5 opacity-10 pointer-events-none uppercase tracking-tighter whitespace-nowrap overflow-hidden w-full text-center">MECANO SOLUTIONS</div>
+        
+        <span
+            className="absolute -bottom-20 left-0 text-[20vw] font-display font-900 text-white/5 opacity-5 leading-none pointer-events-none uppercase tracking-tighter">SOLUTIONS</span>
     </footer>
 
     
