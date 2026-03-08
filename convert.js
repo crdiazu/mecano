@@ -91,16 +91,12 @@ bodyContent = bodyContent.replace(
 
 // Photo Background Replacements
 bodyContent = bodyContent.replace(
-    /<section className="bg-mecano-gray py-12 border-b border-mecano-slate\/5">/,
+    /<section className="bg-mecano-gray py-12 border-b border-mecano-slate\/5">([\s\S]*?)<\/section>/,
     `<section className="relative py-20 border-y border-white/5 shadow-2xl overflow-hidden bg-mecano-gray">
         <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
             <img src="/images/productos/estanteria full space.jpg" alt="Estanterías MECANO" className="w-full h-full object-cover grayscale" />
         </div>
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">`
-);
-bodyContent = bodyContent.replace(
-    /<\/section>\s*<section id="productos"/,
-    `    </section>\n\n        <section id="productos"`
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">$1</section>`
 );
 
 bodyContent = bodyContent.replace(
