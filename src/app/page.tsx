@@ -147,7 +147,11 @@ export default function Home() {
         </section>
 
         
-        <section className="bg-mecano-gray py-12 border-b border-mecano-slate/5">
+        <section className="relative py-20 border-y border-white/5 shadow-2xl overflow-hidden bg-mecano-gray">
+        <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
+            <img src="/images/productos/estanteria full space.jpg" alt="Estanterías MECANO" className="w-full h-full object-cover grayscale" />
+        </div>
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="flex flex-col">
                     <span className="text-mecano-orange font-display font-800 text-4xl">15+</span>
@@ -170,9 +174,9 @@ export default function Home() {
                         Cotización</span>
                 </div>
             </div>
+            </div>
         </section>
 
-        
         <section id="productos" className="py-24 relative overflow-hidden bg-white">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20 animate-fade-up">
@@ -437,7 +441,12 @@ export default function Home() {
         </section>
     </main>
 
-    <footer className="bg-black py-16 text-white overflow-hidden relative">
+    <footer className="relative py-20 text-white overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0 opacity-20 mix-blend-luminosity">
+            <img src="/images/productos/RackSelectivo1.jpg" alt="MECANO Industrial" className="w-full h-full object-cover grayscale brightness-50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        </div>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
         <div
             className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
             <div className="flex items-center gap-12">

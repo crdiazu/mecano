@@ -89,6 +89,30 @@ bodyContent = bodyContent.replace(
     '<button onClick={() => document.getElementById(\'contacto\')?.scrollIntoView({ behavior: \'smooth\' })} className="bg-mecano-orange text-white px-8 py-3 font-display font-700 text-xs uppercase tracking-[0.1em] hover:bg-mecano-slate transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-mecano-orange/20 hover:shadow-mecano-slate/30 active:scale-95 group relative overflow-hidden"><span className="relative z-10 block transition-transform duration-300 group-hover:scale-105">Cotizar Proyecto</span><div className="absolute inset-0 h-full w-full scale-0 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-150"></div></button>'
 );
 
+// Photo Background Replacements
+bodyContent = bodyContent.replace(
+    /<section className="bg-mecano-gray py-12 border-b border-mecano-slate\/5">/,
+    `<section className="relative py-20 border-y border-white/5 shadow-2xl overflow-hidden bg-mecano-gray">
+        <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply">
+            <img src="/images/productos/estanteria full space.jpg" alt="Estanterías MECANO" className="w-full h-full object-cover grayscale" />
+        </div>
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">`
+);
+bodyContent = bodyContent.replace(
+    /<\/section>\s*<section id="productos"/,
+    `    </div>\n        </section>\n\n        <section id="productos"`
+);
+
+bodyContent = bodyContent.replace(
+    /<footer className="bg-black py-16 text-white overflow-hidden relative">/,
+    `<footer className="relative py-20 text-white overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0 opacity-20 mix-blend-luminosity">
+            <img src="/images/productos/RackSelectivo1.jpg" alt="MECANO Industrial" className="w-full h-full object-cover grayscale brightness-50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        </div>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">`
+);
+
 
 
 const pageTsx = `'use client';
