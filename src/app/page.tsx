@@ -446,7 +446,7 @@ export default function Home() {
             <img src="/images/productos/RackSelectivo1.jpg" alt="MECANO Industrial" className="w-full h-full object-cover grayscale brightness-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
         </div>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
+        <div className="relative z-20">
         <div
             className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
             <div className="flex items-center gap-12">
@@ -468,6 +468,7 @@ export default function Home() {
         
         <span
             className="absolute -bottom-20 left-0 text-[20vw] font-display font-900 text-white/5 opacity-5 leading-none pointer-events-none uppercase tracking-tighter">SOLUTIONS</span>
+    </div>
     </footer>
 
     

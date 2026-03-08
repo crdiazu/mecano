@@ -100,13 +100,14 @@ bodyContent = bodyContent.replace(
 );
 
 bodyContent = bodyContent.replace(
-    /<footer className="bg-black py-16 text-white overflow-hidden relative">/,
+    /<footer className="bg-black py-16 text-white overflow-hidden relative">([\s\S]*?)<\/footer>/,
     `<footer className="relative py-20 text-white overflow-hidden bg-black">
         <div className="absolute inset-0 z-0 opacity-20 mix-blend-luminosity">
             <img src="/images/productos/RackSelectivo1.jpg" alt="MECANO Industrial" className="w-full h-full object-cover grayscale brightness-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
         </div>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">`
+        <div className="relative z-20">$1</div>
+    </footer>`
 );
 
 
