@@ -26,16 +26,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              {logoImage && (
-                <Image
-                  src={logoImage.imageUrl}
-                  alt={logoImage.description}
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
-                  data-ai-hint={logoImage.imageHint}
+                <img
+                  src="/images/logo/logo.jpg"
+                  alt="MECANO Solutions Logo"
+                  className="w-14 h-auto object-contain"
                 />
-              )}
               <div>
                 <div className="font-headline font-bold text-foreground">
                   MECANO SOLUTIONS
@@ -76,8 +71,8 @@ export default function Footer() {
             <h4 className="font-headline font-semibold text-foreground mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="https://wa.me/56999813058" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">+56 9 9981 3058</a></li>
-              <li><a href="mailto:info@mecanosolutions.cl" className="hover:text-primary transition">info@mecanosolutions.cl</a></li>
-              <li>Carretera General San Martín, Paradero 26 S/N<br/>Colina, Chile</li>
+              <li><a href="mailto:cabarca@mecanosolutions.cl" className="hover:text-primary transition">cabarca@mecanosolutions.cl</a></li>
+              <li>Carretera General San Martin, paradero 26 s/n<br/>Colina, Chile</li>
             </ul>
           </div>
         </div>

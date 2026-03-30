@@ -39,17 +39,11 @@ export default function Header() {
       <div className="container mx-auto px-6 lg:px-8 h-[80px] flex items-center justify-between">
         
         <Link href="/" className="flex items-center gap-3">
-          {logoImage && (
-            <Image
-              src={logoImage.imageUrl}
-              alt={logoImage.description}
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain"
-              data-ai-hint={logoImage.imageHint}
-              priority
+            <img
+              src="/images/logo/logo.jpg"
+              alt="MECANO Solutions Logo"
+              className="h-14 w-auto object-contain"
             />
-          )}
           <div>
             <div className="font-headline font-bold text-foreground text-lg">MECANO SOLUTIONS</div>
             <div className="text-muted-foreground text-xs">Almacenaje Modular en Acero</div>

@@ -1,5 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Header from '@/app/components/Header';
+import Hero from '@/app/components/Hero';
+import FeatureCard from '@/app/components/FeatureCard';
+import ContactForm from '@/app/components/ContactForm';
 
 export default function Home() {
     const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -38,11 +42,10 @@ export default function Home() {
             
 
     
-    <header className={`fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b transition-transform duration-500 will-change-transform ${isScrollingUp ? 'translate-y-0 border-mecano-slate/10 shadow-sm' : '-translate-y-full border-transparent'}`}>
+    <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-mecano-slate/10">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
-            
             <div className="flex items-center gap-3 group cursor-pointer">
-                <img src="/images/logo/logo2.png" alt="MECANO Solutions" className="h-10 w-auto transition-transform group-hover:scale-105" />
+                <img src="/images/logo/logo.jpg" alt="MECANO Solutions" className="h-14 w-auto transition-transform group-hover:scale-105" />
             </div>
 
             
@@ -51,13 +54,13 @@ export default function Home() {
                 <a href="#proyectos" className="relative group text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">Proyectos<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-mecano-orange transition-all duration-300 group-hover:w-full"></span></a>
                 <a href="#certificaciones" className="relative group text-sm font-600 uppercase tracking-widest hover:text-mecano-orange transition-colors">Normativa<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-mecano-orange transition-all duration-300 group-hover:w-full"></span></a>
                 <div className="h-8 w-px bg-mecano-slate/10"></div>
-                <a href="tel:+56223456789" className="text-xs font-700 tracking-tighter">
+                <a href="tel:+56999813058" className="text-xs font-700 tracking-tighter">
                     <span className="block text-mecano-orange uppercase">Línea Técnica</span>
-                    +56 2 2345 6789
+                    +56 9 9981 3058
                 </a>
             </nav>
 
-            <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="bg-mecano-orange text-white px-8 py-3 font-display font-700 text-xs uppercase tracking-[0.1em] hover:bg-mecano-slate transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-mecano-orange/20 hover:shadow-mecano-slate/30 active:scale-95 group relative overflow-hidden"><span className="relative z-10 block transition-transform duration-300 group-hover:scale-105">Cotizar Proyecto</span><div className="absolute inset-0 h-full w-full scale-0 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-150"></div></button>
+            <button onClick={() => { const el = document.getElementById('contacto'); if(el) el.scrollIntoView({ behavior: 'smooth' }); }} className="bg-mecano-orange text-white px-8 py-3 font-display font-700 text-xs uppercase tracking-[0.1em] hover:bg-mecano-slate transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-mecano-orange/20 hover:shadow-mecano-slate/30 active:scale-95 group relative overflow-hidden"><span className="relative z-10 block transition-transform duration-300 group-hover:scale-105">Cotizar Proyecto</span><div className="absolute inset-0 h-full w-full scale-0 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-150"></div></button>
         </div>
     </header>
 
@@ -117,7 +120,7 @@ export default function Home() {
                             <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
                                 <span className="text-[10px] text-white/50 uppercase font-600 tracking-widest">Capacidad
                                     Max</span>
-                                <span className="text-mecano-orange font-bold text-2xl">3000KG</span>
+                                <span className="text-mecano-orange font-bold text-2xl">250KG</span>
                             </div>
                             <div className="flex justify-between items-baseline border-b border-white/10 pb-4">
                                 <span className="text-[10px] text-white/50 uppercase font-600 tracking-widest">Ajuste
@@ -193,7 +196,7 @@ export default function Home() {
                     <div
                         className="md:col-span-8 md:row-span-1 bg-mecano-slate group relative overflow-hidden flex items-end p-10 cursor-pointer">
                         <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
-                            <img  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000"
+                            <img  src="/images/productos/estanteria full space.jpg"
                                 alt="Rack Selectivo"
                                 className="w-full h-full object-cover grayscale brightness-50 transition-transform duration-700 group-hover:scale-110" />
                         </div>
@@ -232,13 +235,16 @@ export default function Home() {
                             <span className="text-mecano-slate font-bold text-xs uppercase tracking-widest">Cotización
                                 Express</span>
                         </div>
-                        <div className="absolute -right-20 -bottom-20 w-80 h-80 opacity-20 group-hover:scale-125 transition-transform duration-1000"><img src="/images/productos/estaterias angulo ranurado.png" alt="Ángulo Ranurado" className="w-full h-full object-cover object-left-top mix-blend-multiply" /></div>
+                        <div className="absolute -right-20 -bottom-20 w-80 h-80 opacity-20 group-hover:scale-125 transition-transform duration-1000"><img src="/images/productos/estanteriaanguloranurado.jpg" alt="Ángulo Ranurado" className="w-full h-full object-cover object-left-top mix-blend-multiply" /></div>
                     </div>
 
                     
                     <div
-                        className="md:col-span-4 md:row-span-1 bg-mecano-gray p-10 flex flex-col justify-between border-t border-mecano-slate/5 group cursor-pointer">
-                        <div className="flex justify-between items-start">
+                        className="md:col-span-4 md:row-span-1 bg-mecano-gray p-10 flex flex-col justify-between border-t border-mecano-slate/5 group cursor-pointer relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                            <img src="/images/productos/estanteriafullspace2.jpg" alt="Full Space" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="relative z-20 flex justify-between items-start">
                             <h3 className="font-display font-800 text-3xl uppercase leading-none">FULL <br  /> SPACE</h3>
                             <span
                                 className="w-12 h-12 rounded-full border border-mecano-slate/20 flex items-center justify-center group-hover:bg-mecano-slate group-hover:text-white transition-colors">
@@ -248,7 +254,7 @@ export default function Home() {
                                 </svg>
                             </span>
                         </div>
-                        <div>
+                        <div className="relative z-20">
                             <p className="text-mecano-slate/60 text-xs uppercase font-700 tracking-wider mb-2">Ahorro de
                                 superficie</p>
                             <p className="text-sm font-500">Duplica la capacidad eliminando pasillos muertos.</p>
@@ -257,8 +263,11 @@ export default function Home() {
 
                     
                     <div
-                        className="md:col-span-4 md:row-span-1 bg-mecano-gray/30 p-10 flex flex-col justify-between border-t border-l border-mecano-slate/5 group cursor-pointer">
-                        <div className="flex justify-between items-start">
+                        className="md:col-span-4 md:row-span-1 bg-mecano-gray/30 p-10 flex flex-col justify-between border-t border-l border-mecano-slate/5 group cursor-pointer relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                            <img src="/images/productos/altilloestructural.jpg" alt="Altillos Estructurales" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="relative z-20 flex justify-between items-start">
                             <h3 className="font-display font-800 text-3xl uppercase leading-none">ALTILLOS <br  /> MEZZANINE
                             </h3>
                             <span
@@ -269,7 +278,7 @@ export default function Home() {
                                 </svg>
                             </span>
                         </div>
-                        <div>
+                        <div className="relative z-20">
                             <p className="text-mecano-orange font-700 text-xs uppercase tracking-wider mb-2">Optimización
                                 vertical</p>
                             <p className="text-sm font-500">Crea nuevos m² sin ampliar la construcción física.</p>
@@ -354,7 +363,7 @@ export default function Home() {
                                         className="block text-[10px] font-bold text-mecano-slate/40 uppercase tracking-widest">Email
                                         Corporativo</span>
                                     <span
-                                        className="text-xl font-display font-800 text-mecano-slate tracking-tight">contacto@mecanosolutions.cl</span>
+                                        className="text-xl font-display font-800 text-mecano-slate tracking-tight">cabarca@mecanosolutions.cl</span>
                                 </div>
                             </div>
                             <div className="flex items-center gap-6">
@@ -383,46 +392,7 @@ export default function Home() {
                         <h3
                             className="font-display font-800 text-2xl uppercase italic border-b border-white/10 pb-6 mb-8 tracking-tighter">
                             Formulario de Requerimiento</h3>
-                        <form className="space-y-6">
-                            <div>
-                                <label
-                                    className="text-[10px] uppercase font-700 tracking-widest text-white/50 mb-2 block">Nombre
-                                    / Empresa</label>
-                                <input  type="text"
-                                    className="w-full bg-transparent border-b border-white/20 py-2 focus:border-mecano-orange outline-none transition-colors" />
-                            </div>
-                            <div>
-                                <label
-                                    className="text-[10px] uppercase font-700 tracking-widest text-white/50 mb-2 block">Email
-                                    de Contacto</label>
-                                <input  type="email"
-                                    className="w-full bg-transparent border-b border-white/20 py-2 focus:border-mecano-orange outline-none transition-colors" />
-                            </div>
-                            <div>
-                                <label
-                                    className="text-[10px] uppercase font-700 tracking-widest text-white/50 mb-2 block">Sistema
-                                    de Interés</label>
-                                <select
-                                    className="w-full bg-transparent border-b border-white/20 py-2 focus:border-mecano-orange outline-none transition-colors">
-                                    <option className="bg-mecano-slate">Ángulo Ranurado</option>
-                                    <option className="bg-mecano-slate">Racks Selectivos</option>
-                                    <option className="bg-mecano-slate">Full Space</option>
-                                    <option className="bg-mecano-slate">Altillos / Entreplantas</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label
-                                    className="text-[10px] uppercase font-700 tracking-widest text-white/50 mb-2 block">Detalles
-                                    del Proyecto</label>
-                                <textarea id="detalles" rows="3" title="Detalles del Proyecto"
-                                    placeholder="Describa brevemente su necesidad..."
-                                    className="w-full bg-transparent border-b border-white/20 py-2 focus:border-mecano-orange outline-none transition-colors resize-none"></textarea>
-                            </div>
-                            <button type="submit"
-                                className="w-full bg-mecano-orange py-5 font-display font-800 uppercase tracking-widest hover:bg-white hover:text-mecano-slate transition-all mt-4">
-                                Enviar Requerimiento
-                            </button>
-                        </form>
+                        <ContactForm />
                     </div>
 
                     
@@ -444,10 +414,10 @@ export default function Home() {
         <div
             className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 relative z-20">
             <div className="flex items-center gap-12">
-                <img src="/images/logo/Logo.png" alt="MECANO Solutions" className="h-10 w-auto opacity-80" />
+                <img src="/images/logo/logo.jpg" alt="MECANO Solutions" className="h-12 w-auto opacity-80" />
                 <div className="hidden md:block h-12 w-px bg-white/10"></div>
                 <p className="text-[10px] font-500 text-white/40 max-w-[200px] uppercase leading-relaxed tracking-widest">
-                    Expertos en soluciones de almacenaje certificadas. Carretera Gral. San Martín, Colina.
+                    Expertos en soluciones de almacenaje certificadas. Carretera General San Martin, paradero 26 s/n, Colina.
                 </p>
             </div>
 

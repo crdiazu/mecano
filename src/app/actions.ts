@@ -24,9 +24,9 @@ export async function submitQuote(prevState: any, formData: FormData) {
   }
 
   // TODO: Integrate an email sending service (e.g., Resend, SendGrid)
-  // For now, this action simulates sending the data to info@mecanosolutions.cl
+  // For now, this action simulates sending the data to cabarca@mecanosolutions.cl
   
-  const to = "info@mecanosolutions.cl";
+  const to = "cabarca@mecanosolutions.cl";
   const data = validatedFields.data;
 
   console.log("---- Nueva Solicitud de Cotización ----");
