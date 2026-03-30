@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { JsonLd } from '@/components/landing/json-ld';
@@ -16,11 +16,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/images/logo/logo2.png',
-    apple: '/images/logo/logo2.png',
-    shortcut: '/images/logo/logo2.png',
+    icon: '/images/logo/logo.jpg',
+    apple: '/images/logo/logo.jpg',
+    shortcut: '/images/logo/logo.jpg',
   },
-  themeColor: '#F28C38',
   openGraph: {
     title: 'Estanterías Metálicas Chile | Rack Selectivo y Ángulo Ranurado | MECANO SOLUTIONS',
     description: '✅ Estanterías metálicas industriales en Chile. Rack selectivo, ángulo ranurado, full space y altillos estructurales. Certificación ISO 9001:2015. Cotización gratuita',
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     url: 'https://www.mecanosolutions.cl/',
     images: [
       {
-        url: 'https://www.mecanosolutions.cl/images/logo/logo2.png',
+        url: 'https://www.mecanosolutions.cl/images/logo/logo.jpg',
         width: 1200,
         height: 630,
         alt: 'MECANO SOLUTIONS - Estanterías metálicas',
@@ -38,6 +37,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#F28C38',
 };
 
 export default function RootLayout({
